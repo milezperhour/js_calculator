@@ -1,43 +1,52 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Calculator v0.1</title>
+    <title>Calculator v0.5</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-<div class="calculatorBody">
-    <div class="displayArea"></div>
+<div class="calculatorBody blur">
+
+
+    <div class="displayArea">
+        <div class="calculation"></div>
+        <div class="result"></div>
+    </div>
     <div class="buttonContainer">
-        <div class="row1">
-            <div class="button clearButton">C</div>
-            <div class="button clearEverythingButton">CE</div>
+        <div class="row">
+            <button class="clearButton" value="C">C</button>
+            <button class="clearEntryButton" value="CE">CE</button>
         </div>
-        <div class="row2">
-            <div class="button seven">7</div>
-            <div class="button eight">8</div>
-            <div class="button nine">9</div>
-            <div class="button divide operator">&divide;</div>
+        <div class="row">
+            <button class="key number" value="seven">7</button>
+            <button class="key number" value="eight">8</button>
+            <button class="key number" value="seven">9</button>
+            <button class="key operator" value="divide">/</button>
         </div>
-        <div class="row3">
-            <div class="button four">4</div>
-            <div class="button five">5</div>
-            <div class="button six">6</div>
-            <div class="button multiply operator">&times;</div>
+        <div class="row">
+            <button class="key number" value="four">4</button>
+            <button class="key number" value="five">5</button>
+            <button class="key number" value="six">6</button>
+            <button class="key operator" value="multiply">*</button>
         </div>
-        <div class="row4">
-            <div class="button one">1</div>
-            <div class="button two">2</div>
-            <div class="button three">3</div>
-            <div class="button subtract operator">&minus;</div>
+        <div class="row">
+            <button class="key number" value="one">1</button>
+            <button class="key number" value="two">2</button>
+            <button class="key number" value="three">3</button>
+            <button class="key operator" value="subtract">-</button>
         </div>
-        <div class="row5">
-            <div class="button zero">0</div>
-            <div class="button decimal">.</div>
-            <div class="button equal operator">=</div>
-            <div class="button addition operator">+</div>
+        <div class="row">
+            <button class="key number" value="zero">0</button>
+            <button class="key decimal" value="decimal">.</button>
+            <button class="operator equal" value="equal">=</button>
+            <button class="key operator" value="addition">+</button>
         </div>
     </div>
+
 </div>
 </body>
 </html>
