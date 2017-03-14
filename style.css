@@ -1,0 +1,131 @@
+.calculatorBody{
+    width:50vw;
+    height:90vh;
+    border: 1px solid black;
+    border-radius: 5vh;
+}
+
+.buttonContainer{
+    width:85%;
+    margin:auto;
+    position:relative;
+    top:8vh;
+}
+
+.button:hover{
+    background-color:aquamarine;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+    display:flex;
+    justify-content:space-between;
+}
+
+.displayArea{
+    width:85%;
+    height:14vh;
+    border: 1px solid darkolivegreen;
+    display:block;
+    margin:auto;
+    border-radius: 3vh;
+    position:relative;
+    top:5vh;
+
+}
+
+.clearButton{
+    width:30%;
+    height:10vh;
+    border: 1px solid blue;
+    text-align:center;
+    font-size:2em;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    line-height: 8vw;
+    border-radius: 5vh;
+    margin-left:3vw;
+}
+
+.clearEverythingButton{
+    width:30%;
+    height:10vh;
+    border: 1px solid blue;
+    text-align:center;
+    font-size:2em;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    line-height: 8vw;
+    border-radius: 5vh;
+    margin-right:3vw;
+}
+
+.seven,
+.eight,
+.nine,
+.divide{
+    width:8vw;
+    height:8vw;
+    border: 1px solid blue;
+    text-align:center;
+    font-size:2em;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    line-height: 8vw;
+    border-radius:50%;
+    margin-top:2vh;
+
+}
+
+.four,
+.five,
+.six,
+.multiply{
+    width:8vw;
+    height:8vw;
+    border: 1px solid blue;
+    text-align:center;
+    font-size:2em;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    line-height: 8vw;
+    border-radius:50%;
+    margin-top:2vh;
+
+}
+
+.one,
+.two,
+.three,
+.subtract{
+    width:8vw;
+    height:8vw;
+    border: 1px solid blue;
+    text-align:center;
+    font-size:2em;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    line-height: 8vw;
+    border-radius:50%;
+    margin-top:2vh;
+
+}
+
+.zero,
+.decimal,
+.equal,
+.addition{
+    width:8vw;
+    height:8vw;
+    border: 1px solid blue;
+    text-align:center;
+    font-size:2em;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    line-height: 8vw;
+    border-radius:50%;
+    margin-top:2vh;
+}
