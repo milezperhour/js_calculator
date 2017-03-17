@@ -3,11 +3,13 @@ var storage_object;
 var index=0;
 
 $(document).ready(function(){
-    $(function() {
-        $('.calculatorBody').draggable();
-    });
+    draggableCalc();
     applyClickHandler();
 });
+
+function draggableCalc(){
+    $('.calculatorBody').draggable();
+}
 
 function applyClickHandler() {
     $("button").click(function () {
@@ -45,15 +47,29 @@ function numberPressed(buttonPressed){
     console.log(storage_object);
     console.log("global array: ", global_array_variable);
 
-    if (global_array_variable.length === 0 ){
+
+    if (global_array_variable.length === 0){
         storage_object ={type: type, value: val}; //stores type & value of button clicked
         global_array_variable.push(storage_object);
+
     } else if(global_array_variable[index].hasOwnProperty('type')){
         global_array_variable[index].value += val;
+        console.log('object length ', storage_object.value.length);
+        if (storage_object.value.length > 10){
+            console.log('object after legth of 10 ', storage_object.value.length);
+            $('.display').text(storage_object.value.slice(0, 10));
+        }
+
     } else{
         global_array_variable[index].value += val;
         global_array_variable[index].type = 'number';
+        console.log('object length ', storage_object.value.length);
+        if (storage_object.value.length > 10){
+            console.log('object after legth of 10 ', storage_object.value.length);
+            $('.display').text(storage_object.value.slice(0, 10));
+        }
     }
+
 }
 
 function operatorPressed(buttonPressed){
