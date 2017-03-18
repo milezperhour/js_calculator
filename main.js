@@ -47,6 +47,13 @@ function numberPressed(buttonPressed){
     console.log(storage_object);
     console.log("global array: ", global_array_variable);
 
+    // if (global_array_variable.length === 3 && global_array_variable[2].value != ''){
+    //     $('.display').text(global_array_variable[2].value);
+    //     if (storage_object.value.length > 10){
+    //         $('.display').text(storage_object.value.slice(0, 10));
+    //     }
+    // }
+
 
     if (global_array_variable.length === 0){
         storage_object ={type: type, value: val}; //stores type & value of button clicked
@@ -54,19 +61,30 @@ function numberPressed(buttonPressed){
 
     } else if(global_array_variable[index].hasOwnProperty('type')){
         global_array_variable[index].value += val;
-        console.log('object length ', storage_object.value.length);
-        if (storage_object.value.length > 10){
-            console.log('object after legth of 10 ', storage_object.value.length);
-            $('.display').text(storage_object.value.slice(0, 10));
+        console.log('object value length ', storage_object.value.length);
+        if (global_array_variable.length === 3 && global_array_variable[2].value != ''){
+            $('.display').text(global_array_variable[2].value);
+
         }
+        if (storage_object.value.length > 10){
+            $('.display').text(storage_object.value.slice(0, 10));
+        } else if (global_array_variable[2].value.length > 10){
+            $('.display').text(global_array_variable[2].value.slice(0, 10));
+        }
+
 
     } else{
         global_array_variable[index].value += val;
         global_array_variable[index].type = 'number';
-        console.log('object length ', storage_object.value.length);
+        console.log('object value length', storage_object.value.length);
+        if (global_array_variable.length === 3 && global_array_variable[2].value != ''){
+            $('.display').text(global_array_variable[2].value);
+
+        }
         if (storage_object.value.length > 10){
-            console.log('object after legth of 10 ', storage_object.value.length);
             $('.display').text(storage_object.value.slice(0, 10));
+        } else if (global_array_variable[2].value.length > 10){
+            $('.display').text(global_array_variable[2].value.slice(0, 10));
         }
     }
 
@@ -76,7 +94,7 @@ function operatorPressed(buttonPressed){
     index++;
     console.log( "operator was clicked" );
     var val = $(buttonPressed).text(); //button_clicked is the value
-    //$('.display').append(val);
+    $('.display').text(val);
 
     var type = $(buttonPressed).attr('class');
     console.log("storage_object: ",storage_object);
