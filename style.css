@@ -12,6 +12,8 @@ html {
     border-radius: 5vw;
     box-shadow: 0 4px 15px #0f4f4a;
     margin: 0 auto;
+    position: relative;
+    top: 2vw;
 }
 
 .blur{
