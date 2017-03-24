@@ -47,13 +47,6 @@ function numberPressed(buttonPressed){
     console.log(storage_object);
     console.log("global array: ", global_array_variable);
 
-    // if (global_array_variable.length === 3 && global_array_variable[2].value != ''){
-    //     $('.display').text(global_array_variable[2].value);
-    //     if (storage_object.value.length > 10){
-    //         $('.display').text(storage_object.value.slice(0, 10));
-    //     }
-    // }
-
 
     if (global_array_variable.length === 0){
         storage_object ={type: type, value: val}; //stores type & value of button clicked
@@ -64,7 +57,6 @@ function numberPressed(buttonPressed){
         console.log('object value length ', storage_object.value.length);
         if (global_array_variable.length === 3 && global_array_variable[2].value != ''){
             $('.display').text(global_array_variable[2].value);
-
         }
         if (storage_object.value.length > 10){
             $('.display').text(storage_object.value.slice(0, 10));
@@ -79,7 +71,6 @@ function numberPressed(buttonPressed){
         console.log('object value length', storage_object.value.length);
         if (global_array_variable.length === 3 && global_array_variable[2].value != ''){
             $('.display').text(global_array_variable[2].value);
-
         }
         if (storage_object.value.length > 10){
             $('.display').text(storage_object.value.slice(0, 10));
@@ -200,8 +191,11 @@ function clearEntryPressed(buttonPressed){
 
 function doMath(num1, op, num2){
     if (op === '+'){
-        num1 = parseInt(num1, 12);
-        num2 = parseInt(num2, 12);
+        if (num1 + num2 > 9999999999){
+            $('.display').text('Error');
+        }
+        num1 = parseInt(num1, 10);
+        num2 = parseInt(num2, 10);
         return num1 + num2;
     }
     else if(op === '-'){
